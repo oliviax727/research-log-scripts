@@ -1,3 +1,5 @@
+/// <reference path="./excel-script.d.ts" />
+
 // I fucking hate office scripts
 function main(
   workbook: ExcelScript.Workbook
@@ -201,5 +203,8 @@ namespace ResearchLog {
 
     // Clear start time
     appData.sheet.getRange("L18").clear(ExcelScript.ClearApplyTo.contents);
+
+    // Clear break count
+    appData.sheet.getRange("L21").clear(ExcelScript.ClearApplyTo.contents);
   }
 }
